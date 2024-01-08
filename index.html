@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,600;6..12,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="controller.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <title>Rest Countries API</title>
+  </head>
+  <body>
+    <header class="wrapper">
+      <h2>Where In the World?</h2>
+      <div class="toggle">
+        <span><i class="fa-regular fa-moon"></i></span>
+        <span>Dark Mode</span>
+      </div>
+    </header>
+
+    <div class="filter-section wrapper">
+      <form action="" class="search-form">
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            class="search-input"
+            type="text"
+            id="search"
+            placeholder="Search for a country..."
+          />
+        </div>
+      </form>
+
+      <div class="drop-down">
+        <div class="drop-down-menu">
+          <p>Filter by Region</p>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <ul class="list-menu display-hidden">
+          <li class="list-items">Africa</li>
+          <li class="list-items">America</li>
+          <li class="list-items">Asia</li>
+          <li class="list-items">Europe</li>
+          <li class="list-items">Oceania</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="countries-container wrapper">
+      <!-- <div class="country">
+        <div class= country-img>
+          <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+        </div>
+        <div class="country-details">
+          <h4 class="country-name">United Kingdom</h4>
+          <p id="Population">Population: <span>1233456</span></p>
+          <p id="region">Region: <span>1233456</span></p>
+          <p id="capital">Capital: <span>1233456</span></p>
+        </div>
+      </div>
+      <div class="country">
+        <div>
+          <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+        </div>
+        <div class="country-details">
+          <h4 class="country-name">United Kingdom</h4>
+          <p id="Population">Population: <span>1233456</span></p>
+          <p id="region">Region: <span>1233456</span></p>
+          <p id="capital">Capital: <span>1233456</span></p>
+        </div>
+      </div>
+      <div class="country">
+        <div>
+          <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+        </div>
+        <div class="country-details">
+          <h4 class="country-name">United Kingdom</h4>
+          <p id="Population">Population: <span>1233456</span></p>
+          <p id="region">Region: <span>1233456</span></p>
+          <p id="capital">Capital: <span>1233456</span></p>
+        </div>
+      </div>
+      <div class="country">
+        <div>
+          <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+        </div>
+        <div class="country-details">
+          <h4 class="country-name">United Kingdom</h4>
+          <p id="Population">Population: <span>1233456</span></p>
+          <p id="region">Region: <span>1233456</span></p>
+          <p id="capital">Capital: <span>1233456</span></p>
+        </div>
+      </div>
+      <div class="country">
+        <div>
+          <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+        </div>
+        <div class="country-details">
+          <h4 class="country-name">United Kingdom</h4>
+          <p id="Population">Population: <span>1233456</span></p>
+          <p id="region">Region: <span>1233456</span></p>
+          <p id="capital">Capital: <span>1233456</span></p>
+        </div>
+      </div>
+      <div class="country">
+        <div>
+          <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+        </div>
+        <div class="country-details">
+          <h4 class="country-name">United Kingdom</h4>
+          <p id="Population">Population: <span>1233456</span></p>
+          <p id="region">Region: <span>1233456</span></p>
+          <p id="capital">Capital: <span>1233456</span></p>
+        </div>
+      </div> -->
+    </div>
+    <div class="pagination wrapper">
+      <!-- <button class="btn--inline pagination__btn--prev">
+        <svg class="search__icon">
+          <use href="src/img/icons.svg#icon-arrow-left"></use>
+        </svg>
+        <span>Page 1</span>
+      </button>
+      <button class="btn--inline pagination__btn--next">
+        <span>Page 3</span>
+        <svg class="search__icon">
+          <use href="src/img/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button> -->
+
+      <!-- <button class="pagination__btn-previous">page1</button>
+      <button class="pagination__btn-next">Page2</button> -->
+    </div>
+    <div class="wrapper country-page display-hidden">
+      <button class="back"><i class="fa-solid fa-arrow-left"></i>Back</button>
+      <div class="country-data">
+        <!-- <div>
+          <div>
+            <img src="https://flagcdn.com/dz.svg" alt="country-flag" />
+          </div>
+          <div class="info">
+            <h2 class="country-name">Belgium</h2>
+            <div class="data">
+              <div class="data-1">
+                <p>Native Name: <span>Belgie</span></p>
+                <p>Population: <span>1,123456</span></p>
+                <p>Region: <span>Europe</span></p>
+                <p>Sub Region: <span>Western Europe</span></p>
+                <p>Capital: <span>Brussels</span></p>
+              </div>
+              <div class="data-2">
+                <p>Top Level Domain: <span>.be</span></p>
+                <p>Currencies: <span>Euro</span></p>
+                <p>Languages: <span>Dutch, French, German</span></p>
+              </div>
+            </div>
+            <div class="country-border">
+              <p>Border Countries</p>
+              <button>France</button><button>Germany</button
+              ><button>Netherlands</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
